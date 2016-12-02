@@ -1,5 +1,5 @@
 /* shengjie js bridge handler */
-/* version 1.0.4 */
+/* version 1.0.0 */
 /* create at 2-5-2016 */
 /* modify at 4-28-2016 */
 
@@ -16,6 +16,8 @@
 			return 'unknown';
 		}
 	};
+	
+	_jsbHandler.version = '1.0.0'
 	
 	_jsbHandler.sjapp = function(){
 		var userAgent = _jsbHandler.getUA();
@@ -173,33 +175,4 @@
 	_jsbHandler.init();
 	
 	return _jsbHandler;
-})(window.jsbHandler || (window.jsbHandler = {}));
-
-// ;(function(_thandler){
-// 	_thandler.init = function(_obj){
-// 		_obj.myobj = _obj.myobj || {};
-// 		_obj.callback(_obj.myobj);
-// 	}
-// })(window.thandler || (window.thandler = {}));
-// egs
-/*
-
-window.jsbHandler.callHandler({
-	event:'openMotionShakeHandler',
-	params:{
-		'open':'1'
-	},
-	callback:function(rpdata){
-		
-	}
-});
-
-window.jsbHandler.registerHandler({
-	event:'motionShakeHandler',
-	callback:function(rpdata, _myobj){
-			document.getElementById('infoWrap').innerHTML = "motion shake";
-			responseCallback({status_code:200});
-	}
-});
-
-*/
+})(window.jsBridge || (window.jsBridge = {}));
